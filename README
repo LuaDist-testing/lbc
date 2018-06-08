@@ -1,0 +1,25 @@
+This is a big-number library for Lua 5.1. It is based on the arbitrary
+precision library number.c written by Philip A. Nelson for GNU bc-1.06:
+	http://www.gnu.org/software/bc/
+
+To try the library, just edit Makefile to reflect your installation of Lua and
+then run make. This will build the library and run a simple test. For detailed
+installation instructions, see
+	http://www.tecgraf.puc-rio.br/~lhf/ftp/lua/install.html
+
+There is no manual but the library is simple and intuitive; see the summary
+below. Read also test.lua, which shows the library in action.
+
+This code is hereby placed in the public domain, except number.c and number.h,
+which are subject to GPL.
+
+Please send comments, suggestions, and bug reports to lhf@tecgraf.puc-rio.br .
+
+-------------------------------------------------------------------------------
+
+bc library:
+ add(x,y) 	 div(x,y) 	 mod(x,y) 	 pow(x,y) 	 tostring(x) 
+ compare(x,y) 	 isneg(x) 	 mul(x,y) 	 sqrt(x) 	 version 
+ digits([n]) 	 iszero(x) 	 number(x) 	 sub(x,y) 
+
+-------------------------------------------------------------------------------
