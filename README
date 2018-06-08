@@ -18,8 +18,11 @@ Please send comments, suggestions, and bug reports to lhf@tecgraf.puc-rio.br .
 -------------------------------------------------------------------------------
 
 bc library:
- add(x,y) 	 div(x,y) 	 mod(x,y) 	 pow(x,y) 	 tostring(x) 
- compare(x,y) 	 isneg(x) 	 mul(x,y) 	 sqrt(x) 	 version 
- digits([n]) 	 iszero(x) 	 number(x) 	 sub(x,y) 
+ __add(x,y) 	 __pow(x,y) 	 digits([n]) 	 mul(x,y) 	 sub(x,y) 
+ __div(x,y) 	 __sub(x,y) 	 div(x,y) 	 neg(x) 	 tonumber(x) 
+ __eq(x,y) 	 __tostring(x) 	 divmod(x,y) 	 number(x) 	 tostring(x) 
+ __lt(x,y) 	 __unm(x) 	 isneg(x) 	 pow(x,y) 	 trunc(x,[n]) 
+ __mod(x,y) 	 add(x,y) 	 iszero(x) 	 powmod(x,y,m) 	 version 
+ __mul(x,y) 	 compare(x,y) 	 mod(x,y) 	 sqrt(x) 
 
 -------------------------------------------------------------------------------

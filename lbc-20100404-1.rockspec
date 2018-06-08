@@ -1,16 +1,16 @@
 -- This file was automatically generated for the LuaDist project.
 
 package="lbc"
-version="20070627-1"
+version="20100404-1"
 -- LuaDist source
 source = {
-  tag = "20070627-1",
+  tag = "20100404-1",
   url = "git://github.com/LuaDist-testing/lbc.git"
 }
 -- Original source
 -- source = {
 --    url = "http://www.tecgraf.puc-rio.br/~lhf/ftp/lua//5.1/lbc.tar.gz",
---    md5 = "da759f8dd014dba41afb3bb3e75336fa",
+--    md5 = "cb763ef3e125f5c6b31fc8a318c3ccd6",
 --    dir = "bc"
 -- }
 description = {
