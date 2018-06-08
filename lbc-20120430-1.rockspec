@@ -1,16 +1,16 @@
 -- This file was automatically generated for the LuaDist project.
 
 package="lbc"
-version="20120420-1"
+version="20120430-1"
 -- LuaDist source
 source = {
-  tag = "20120420-1",
+  tag = "20120430-1",
   url = "git://github.com/LuaDist-testing/lbc.git"
 }
 -- Original source
 -- source = {
---    url = "http://www.tecgraf.puc-rio.br/~lhf/ftp/lua//5.2/lbc.tar.gz",
---    md5="cbe56578065b1f6c7bc9b14b3dfbaf19",
+--    url = "http://www.tecgraf.puc-rio.br/~lhf/ftp/lua//5.1/lbc.tar.gz",
+--    md5 = "9566ccc446475ab0f3734bc9b53c03a3",
 --    dir = "bc"
 -- }
 description = {
@@ -23,7 +23,7 @@ description = {
    license = "GNU General Public License version 2 or later"
 }
 dependencies = {
-   "lua ~> 5.2"
+   "lua >= 5.1"
 }
 
 build = {

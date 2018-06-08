@@ -1,6 +1,6 @@
 -- test bc library
 
-local bc=require"bc"
+require"bc"
 
 ------------------------------------------------------------------------------
 print(bc.version)
