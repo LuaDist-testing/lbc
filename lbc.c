@@ -1,8 +1,8 @@
 /*
 * lbc.c
-* big-number library for Lua 5.1 based on GNU bc-1.06 core library
+* big-number library for Lua 5.2 based on GNU bc-1.06 core library
 * Luiz Henrique de Figueiredo <lhf@tecgraf.puc-rio.br>
-* 04 Apr 2010 22:40:22
+* 20 Apr 2012 08:15:43
 * This code is hereby placed in the public domain.
 */
 
@@ -20,7 +20,7 @@
 	(*(void **)(lua_newuserdata(L, sizeof(void *))) = (u))
 
 #define MYNAME		"bc"
-#define MYVERSION	MYNAME " library for " LUA_VERSION " / Apr 2010 / "\
+#define MYVERSION	MYNAME " library for " LUA_VERSION " / Apr 2012 / "\
 			"based on GNU bc-1.06"
 #define MYTYPE		MYNAME " bignumber"
 
@@ -35,8 +35,7 @@ void bc_error(const char *mesg)
 static void Bnew(lua_State *L, bc_num x)
 {
  lua_boxpointer(L,x);
- luaL_getmetatable(L,MYTYPE);
- lua_setmetatable(L,-2);
+ luaL_setmetatable(L,MYTYPE);
 }
 
 static bc_num Bget(lua_State *L, int i)
@@ -308,8 +307,7 @@ LUALIB_API int luaopen_bc(lua_State *L)
 {
  bc_init_numbers();
  luaL_newmetatable(L,MYTYPE);
- lua_setglobal(L,MYNAME);
- luaL_register(L,MYNAME,R);
+ luaL_setfuncs(L,R,0);
  lua_pushliteral(L,"version");			/** version */
  lua_pushliteral(L,MYVERSION);
  lua_settable(L,-3);

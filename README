@@ -1,4 +1,4 @@
-This is a big-number library for Lua 5.1. It is based on the arbitrary
+This is a big-number library for Lua 5.2. It is based on the arbitrary
 precision library number.c written by Philip A. Nelson for GNU bc-1.06:
 	http://www.gnu.org/software/bc/
 

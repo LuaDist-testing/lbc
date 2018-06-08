@@ -1,16 +1,16 @@
 -- This file was automatically generated for the LuaDist project.
 
 package="lbc"
-version="20100404-1"
+version="20120420-1"
 -- LuaDist source
 source = {
-  tag = "20100404-1",
+  tag = "20120420-1",
   url = "git://github.com/LuaDist-testing/lbc.git"
 }
 -- Original source
 -- source = {
---    url = "http://www.tecgraf.puc-rio.br/~lhf/ftp/lua//5.1/lbc.tar.gz",
---    md5 = "cb763ef3e125f5c6b31fc8a318c3ccd6",
+--    url = "http://www.tecgraf.puc-rio.br/~lhf/ftp/lua//5.2/lbc.tar.gz",
+--    md5="cbe56578065b1f6c7bc9b14b3dfbaf19",
 --    dir = "bc"
 -- }
 description = {
@@ -23,19 +23,19 @@ description = {
    license = "GNU General Public License version 2 or later"
 }
 dependencies = {
-   "lua >= 5.1"
+   "lua ~> 5.2"
 }
 
 build = {
-   type = "make",
-   install_pass = false,
-   build_target = "so",
-   build_variables = {
-      LUAINC = "$(LUA_INCDIR)",
-      LUALIB = "$(LUA_LIBDIR)",
-      LUABIN = "$(LUA_BINDIR)" 
-   },
-   install = {
-      lib = { "bc.so" }
+   type = "builtin",
+   modules = {
+      bc = {
+         sources = {
+            "lbc.c", "number.c"
+         },
+         incdirs = {
+            "."
+         },
+      }
    }
 }
